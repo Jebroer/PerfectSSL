@@ -95,6 +95,5 @@ if ($isWindows2022) {
 }
 
 # Continue with the rest of the script
-# ... (PFS, disabling insecure protocols and ciphers) ...
 
 Write-Host "Perfect Forward Secrecy (PFS) configuration with insecure protocols and ciphers disabled. You may need to restart the system for the changes to take effect."
