@@ -4,7 +4,7 @@ This PowerShell script is designed to configure SSL/TLS settings on Windows 11 a
 
 ## Usage Instructions
 
-1. **Download the Script**: Download the PowerShell script from this repository.
+1. **Download the Script**: Download the PowerShell script from this repository [here](https://github.com/yeorz/PerfectSSL/releases/). 
 
 2. **Run as Administrator**: Right-click the script file and choose "Run as Administrator" to ensure proper permissions for modifying the Windows registry.
 
