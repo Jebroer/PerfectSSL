@@ -1,3 +1,12 @@
+# Copyright 2023, Yeorz
+# Inspired by Alexander Hass's script: https://www.hass.de/content/setup-microsoft-windows-or-iis-ssl-perfect-forward-secrecy-and-tls-12
+#
+# After running this script the computer only supports:
+# - TLS 1.2
+#
+# Version 0.1, use at your own risk.
+
+
 # Enable PFS by configuring the appropriate cipher suites
 $protocols = @("TLS 1.0", "TLS 1.1", "TLS 1.2")
 $ciphers = @(
