@@ -81,6 +81,11 @@ $protocols | ForEach-Object {
 }
 
 # Enable TLS 1.3 if the OS is Windows Server 2022
+
+#Check the Windows version
+$osVersion = [System.Environment]::OSVersion.Version
+$isWindows2022 = $osVersion.Major -eq 10 -and $osVersion.Build -eq 20348    
+
 if ($isWindows2022) {
     Write-Host "Windows Server 2022 detected. Enabling TLS 1.3..."
     
