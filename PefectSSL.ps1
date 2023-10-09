@@ -80,4 +80,21 @@ $protocols | ForEach-Object {
     }
 }
 
+# Enable TLS 1.3 if the OS is Windows Server 2022
+if ($isWindows2022) {
+    Write-Host "Windows Server 2022 detected. Enabling TLS 1.3..."
+    
+    $tls13KeyPath = "HKLM:\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.3"
+    $tls13Key = Get-Item -Path $tls13KeyPath -ErrorAction SilentlyContinue
+
+    if ($tls13Key -eq $null) {
+        New-Item -Path $tls13KeyPath -Force
+    }
+
+    Set-ItemProperty -Path $tls13KeyPath -Name "Enabled" -Value 1
+}
+
+# Continue with the rest of the script
+# ... (PFS, disabling insecure protocols and ciphers) ...
+
 Write-Host "Perfect Forward Secrecy (PFS) configuration with insecure protocols and ciphers disabled. You may need to restart the system for the changes to take effect."
