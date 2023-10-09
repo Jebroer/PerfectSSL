@@ -32,4 +32,4 @@ This PowerShell script is designed to configure SSL/TLS settings on Windows 11 a
 
 This script is for educational and informational purposes only. It should not be considered a substitute for professional security advice and best practices. Use it at your own risk and discretion.
 
-If you encounter any issues or have questions, feel free to [open an issue](https://github.com/your/repository/issues) on this GitHub repository for assistance.
+If you encounter any issues or have questions, feel free to [open an issue](https://github.com/Yeorz/PerfectSSL/issues) on this GitHub repository for assistance.
